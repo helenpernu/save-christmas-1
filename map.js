@@ -1,5 +1,10 @@
 
 function map(arr, func) {
+    let myArray = []
+    for (let i = 0; i < arr.length; i++) {
+        myArray[i] = func(arr[i])
+    }
+    return myArray
     // skapa en ny tom array av samma längd som arr
 
     // för varje element i arr
@@ -24,3 +29,7 @@ console.log(stringArray)    // ['boll', 'häst', 'flygplan']
 
 // Test 3 - GÖR ETT EGET TEST HÄR
 console.log('\nTEST 3')
+const myTestArray = [7, 3, 5]
+const myTestArrayTwo = map(myTestArray, x => x - 2)
+console.log(myTestArray)
+console.log(myTestArrayTwo)
